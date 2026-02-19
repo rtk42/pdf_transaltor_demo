@@ -41,6 +41,10 @@ class TextBlock(BaseModel):
     id: str
     bbox: list[float]
     text: str
+    font_size: float = 11.0
+    is_bold: bool = False
+    is_italic: bool = False
+    color: list[float] = [0.0, 0.0, 0.0]  # RGB, values 0–1
 
 
 class PageData(BaseModel):

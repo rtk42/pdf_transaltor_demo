@@ -106,7 +106,7 @@ def run_pipeline(job: Job) -> None:
 
         # --- Render ---
         _update(job, status=JobStatus.RENDERING, progress=85, message="Rebuilding PDF")
-        render_pdf(pages, translations, str(job.output_pdf))
+        render_pdf(pages, translations, str(job.output_pdf), str(job.input_pdf))
 
         _update(job, status=JobStatus.DONE, progress=100, message="Translation complete")
 
